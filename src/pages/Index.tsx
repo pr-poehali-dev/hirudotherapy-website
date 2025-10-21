@@ -198,7 +198,57 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4">
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-primary mb-4">Сертификаты и дипломы</h2>
+            <div className="w-20 h-1 bg-accent mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="border-border hover:shadow-xl transition-shadow group cursor-pointer overflow-hidden">
+              <div className="relative">
+                <img
+                  src="https://cdn.poehali.dev/projects/ee3c1d65-d52e-4bda-bcdd-78b87f238de8/files/24474f4f-1235-4c47-80f3-d93b897d8711.jpg"
+                  alt="Диплом о высшем медицинском образовании"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+              </div>
+              <CardContent className="p-6">
+                <p className="text-center font-medium">Диплом о высшем медицинском образовании</p>
+              </CardContent>
+            </Card>
+            <Card className="border-border hover:shadow-xl transition-shadow group cursor-pointer overflow-hidden">
+              <div className="relative">
+                <img
+                  src="https://cdn.poehali.dev/projects/ee3c1d65-d52e-4bda-bcdd-78b87f238de8/files/51ed103f-9929-455e-bccc-9d6d52b1cf60.jpg"
+                  alt="Сертификат по гирудотерапии"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+              </div>
+              <CardContent className="p-6">
+                <p className="text-center font-medium">Сертификат специалиста по гирудотерапии</p>
+              </CardContent>
+            </Card>
+            <Card className="border-border hover:shadow-xl transition-shadow group cursor-pointer overflow-hidden">
+              <div className="relative">
+                <img
+                  src="https://cdn.poehali.dev/projects/ee3c1d65-d52e-4bda-bcdd-78b87f238de8/files/fc73ff0c-a0b6-4bb4-802b-f84131616acb.jpg"
+                  alt="Сертификат повышения квалификации"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+              </div>
+              <CardContent className="p-6">
+                <p className="text-center font-medium">Сертификат повышения квалификации</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Услуги</h2>
@@ -222,7 +272,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="indications" className="py-20 px-4 bg-secondary/30">
+      <section id="indications" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Показания и противопоказания</h2>
@@ -269,7 +319,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4">
+      <section id="reviews" className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Отзывы пациентов</h2>
@@ -295,7 +345,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="prices" className="py-20 px-4 bg-secondary/30">
+      <section id="prices" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Цены</h2>
@@ -316,7 +366,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-20 px-4">
+      <section id="faq" className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Вопросы и ответы</h2>
@@ -337,7 +387,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-secondary/30">
+      <section id="contacts" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Контакты</h2>
