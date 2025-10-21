@@ -4,16 +4,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -95,6 +98,32 @@ const Index = () => {
                 </button>
               ))}
             </div>
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon">
+                  <Icon name="Menu" size={24} />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[280px] bg-background">
+                <div className="flex flex-col gap-6 mt-8">
+                  {['about', 'services', 'indications', 'reviews', 'prices', 'faq', 'contacts'].map((section) => (
+                    <button
+                      key={section}
+                      onClick={() => scrollToSection(section)}
+                      className="text-lg text-left text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {section === 'about' && 'О специалисте'}
+                      {section === 'services' && 'Услуги'}
+                      {section === 'indications' && 'Показания'}
+                      {section === 'reviews' && 'Отзывы'}
+                      {section === 'prices' && 'Цены'}
+                      {section === 'faq' && 'Вопросы'}
+                      {section === 'contacts' && 'Контакты'}
+                    </button>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </nav>
